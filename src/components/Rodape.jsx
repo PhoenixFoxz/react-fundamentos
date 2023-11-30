@@ -1,14 +1,13 @@
 function Rodape() {
+  const exemplosEstilos = {
+    backgroundColor: "lightblue",
+    padding: "2%",
+    color: "blue",
+    border: "solid 4px #f00",
+  };
   return (
-    <footer
-      style={{
-        backgroundColor: "red",
-        textAlign: "Center",
-        padding: "2%",
-        fontsize: "1%",
-      }}
-    >
-      <h2>Rodapé da aplicação</h2>
+    <footer style={exemplosEstilos}>
+      <h2 style={{ textAlign: "Center" }}>Rodapé da aplicação</h2>
     </footer>
   );
 }
