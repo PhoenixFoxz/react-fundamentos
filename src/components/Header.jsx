@@ -6,10 +6,10 @@ import estilos from "./Header.module.css";
 
 function Header() {
   return (
-    <header>
-      <h1>
-        <span className={estilos["destaque-texto"]}>Olá</span>
-        <span className={estilos.sombra}>React!</span>
+    <header className="corMenu">
+      <h1 className="centralizar corLetraMenu">
+        <span className={estilos["destaque-texto"]}>Olá </span>
+        <span className={estilos["sombra"]}>React!</span>
       </h1>
       <hr />
       <p className={`${estilos["destaque-texto"]} centralizar`}>

@@ -7,6 +7,7 @@ da aplicação React */
 *::after,
 *::before {
   box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* Reset */
@@ -25,7 +26,7 @@ html {
 
 /* Bloco/Box */
 .sombra {
-  box-shadow: red 0 0 10px;
+  box-shadow: gray 0 0 10px;
   background-color: white;
   border-radius: 10px;
   padding: 0.09%;
@@ -39,4 +40,12 @@ html {
 
 .centralizar {
   text-align: center;
+}
+
+.corLetraMenu {
+  color: white;
+}
+
+.corMenu {
+  background-color: rgb(82, 81, 81);
 }

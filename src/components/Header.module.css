@@ -2,17 +2,21 @@
 
 /* Sombra de texto */
 .sombra {
-  text-shadow: green 2px 2px 5px;
+  text-shadow: gray 2px 2px 5px;
 }
 
 hr {
   height: 4px;
   border: none;
-  background-color: purple;
+  background-color: gray;
   width: 50%;
   margin: auto;
 }
 
 .destaque-texto {
   text-transform: uppercase;
+}
+
+.separacao {
+  padding: 1%;
 }
