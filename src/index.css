@@ -30,3 +30,13 @@ html {
   border-radius: 10px;
   padding: 0.09%;
 }
+
+.destaque-texto {
+  background-color: yellow;
+  padding: 4px;
+  border-bottom: 4px;
+}
+
+.centralizar {
+  text-align: center;
+}
