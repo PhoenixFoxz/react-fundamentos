@@ -7,6 +7,7 @@ function App() {
   /* Comentário de várias linhas ALT SHIFT A */
   return (
     <>
+      {/* fragmento */}
       <Header />
       {/* Comentário DENTRO do JSX 
     É normal ficar entre {} nesta situação.*/}
