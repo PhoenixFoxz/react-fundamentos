@@ -83,6 +83,10 @@ const StyledArtigo = styled.article`
   p {
     font-size: 1.1rem;
   }
+
+  .centralizar {
+    text-align: right;
+  }
 `;
 
 const StyledCabecalho = styled.header`
