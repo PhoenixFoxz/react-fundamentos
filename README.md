@@ -8,7 +8,13 @@ JSX -> HTML + JS para criar componentes
 - main.jsx (Inicialização do React)
 - index.html (elemento raíz e chamada do script)
 
-### 05-styled-components
+## 06-props
+
+São parâmetros/argumentos com valores/expressões passados para os componentes React, normalmente usada para injeção de dados dinâmicos. As `props` funcionam como objetos, e cada `prop` criada por você passar a ter propriedades deste objeto.
+
+As `props` são criadas manualmente, embora também exista uma `prop` especial chamada `children` que permite ler/transmitir o conteúdo que fica entre as tags de abertura/fechamento de um componente.
+
+## 05-styled-components
 
 ---
 
