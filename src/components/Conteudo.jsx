@@ -20,9 +20,15 @@ function Conteudo() {
         facilis?
       </p>
       {/* Reaproveitamento de Componentes */}
-      <Artigo />
-      <Artigo />
-      <Artigo />
+      <Artigo titulo="Senhor dois Anéis" descricao="Livro criado por Tokien" />
+      <Artigo
+        titulo="Game Of Thrones"
+        descricao="Aventura maluca com gente sempre morrendo"
+      />
+      <Artigo
+        titulo="HTML5 e CSS3"
+        descricao="Fonte de estudos para quem quer começar Front-End"
+      />
     </StyledConteudo>
   );
 }
