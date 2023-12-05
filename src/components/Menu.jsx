@@ -1,12 +1,12 @@
-import estilos from "./Header.module.css";
+import { StyledMenu } from "../styles/styles.js";
 
 function Menu() {
   return (
-    <nav className={`${estilos["separacao"]} centralizar`}>
+    <StyledMenu>
       <a href="">Home </a>
       <a href="">Produtos </a>
       <a href="">Contato</a>
-    </nav>
+    </StyledMenu>
   );
 }
 

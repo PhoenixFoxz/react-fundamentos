@@ -1,22 +1,16 @@
+import { StyledCabecalho } from "../styles/styles.js";
 import Menu from "./Menu";
 
 // Importação do módulo CSS como um objeto chamado estilos (o nome é a seu critério)
 
-import estilos from "./Header.module.css";
-
 function Header() {
   return (
-    <header className="corMenu">
-      <h1 className="centralizar corLetraMenu">
-        <span className={estilos["destaque-texto"]}>Olá </span>
-        <span className={estilos["sombra"]}>React!</span>
-      </h1>
+    <StyledCabecalho>
+      <h1>Olá React!</h1>
       <hr />
-      <p className={`${estilos["destaque-texto"]} centralizar`}>
-        Classes combinadas
-      </p>
+      <p>Classes combinadas</p>
       <Menu />
-    </header>
+    </StyledCabecalho>
   );
 }
 

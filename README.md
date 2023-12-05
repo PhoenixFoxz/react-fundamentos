@@ -8,6 +8,22 @@ JSX -> HTML + JS para criar componentes
 - main.jsx (Inicialização do React)
 - index.html (elemento raíz e chamada do script)
 
+### 05-styled-components
+
+---
+
+Biblioteca (ou lib) muito comum para estilização CSS in JS de componentes.
+
+Para instalação, execute: npm install styled-components
+
+Para utilização, crie componentes estilizados usando a sintaxe:
+
+```JS
+const StyledNome = styled.tag
+  propriedadecss: valorDaPropriedade;
+  propriedadecss: valorDaPropriedade;
+```
+
 ## 04-estilos
 
 ## CSS in JS
