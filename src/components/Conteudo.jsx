@@ -1,7 +1,11 @@
 import { StyledConteudo } from "../styles/styles.js";
 import Artigo from "./Artigo";
-
 function Conteudo() {
+  const lancamento = [
+    "29 de julho de 1954",
+    "1 de agosto de 1996",
+    "HTML5 = 29 de Outubro de 2014 | CSS3 = dezembro de 1996",
+  ];
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -20,14 +24,23 @@ function Conteudo() {
         facilis?
       </p>
       {/* Reaproveitamento de Componentes */}
-      <Artigo titulo="Senhor dois Anéis" descricao="Livro criado por Tokien" />
       <Artigo
-        titulo="Game Of Thrones"
-        descricao="Aventura maluca com gente sempre morrendo"
+        icone="🏹"
+        titulo="Senhor dois Anéis"
+        descricao="Livro criado por Tokien"
+        data={lancamento[0]}
       />
       <Artigo
+        icone="🐲"
+        titulo="Game Of Thrones"
+        descricao="Aventura maluca com gente sempre morrendo"
+        data={lancamento[1]}
+      />
+      <Artigo
+        icone="💎"
         titulo="HTML5 e CSS3"
         descricao="Fonte de estudos para quem quer começar Front-End"
+        data={lancamento[2]}
       />
     </StyledConteudo>
   );

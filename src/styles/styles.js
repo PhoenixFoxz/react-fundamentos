@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
 const StyledRodape = styled.footer`
-  background: rgb(115, 114, 114);
-  background: linear-gradient(
-    117deg,
-    rgba(115, 114, 114, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: black;
   color: white;
   height: 30vh;
   display: flex;
@@ -66,32 +61,23 @@ const StyledMenu = styled.nav`
     /* & -> referência ao
   seletor pai (a) */
     &:hover {
-      background-color: #d126e0;
+      background-color: white;
       border-radius: 15px;
-      color: #f5e3f8;
+      color: black;
       transform: scale(1.05);
     }
   }
 `;
 
 const StyledArtigo = styled.article`
-  background: rgb(224, 172, 234);
-  background: radial-gradient(
-    circle,
-    rgba(224, 172, 234, 1) 0%,
-    rgba(212, 144, 226, 1) 19%,
-    rgba(199, 115, 219, 1) 100%
-  );
+  background: #c5cbd1;
   padding: 1rem;
   margin: 0.5rem 0;
 
   border-radius: 15px 0;
-  border: inset #eb418a 1px;
 
   h3 {
-    /* color: #3f2875fb; */
-    color: #5a2e64;
-    border-bottom: solid #8662d8;
+    border-bottom: solid black;
   }
 
   p {
@@ -100,7 +86,6 @@ const StyledArtigo = styled.article`
 `;
 
 const StyledCabecalho = styled.header`
-  background: rgb(97, 97, 97);
   background: linear-gradient(332deg, #292828 0%, rgba(19, 19, 19, 1) 100%);
   color: white;
   font-size: 1.2rem;
@@ -109,7 +94,7 @@ const StyledCabecalho = styled.header`
 
   hr {
     width: 50%;
-    background-color: #d43bb3;
+    background-color: white;
     border: none;
     height: 4px;
     margin: 8px auto;
