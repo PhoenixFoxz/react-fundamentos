@@ -1,21 +1,16 @@
 import { StyledArtigo } from "../styles/styles.js";
 
 // Definindo props para o componente (parâmetros)
-function Artigo({ imagem, icone, titulo, descricao, data, children }) {
+function Artigo({ titulo, descricao, preco }) {
+  const precoFormatado = preco.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
   return (
     <StyledArtigo>
-      <p className="centralizar">
-        <img src={imagem} alt="" />
-      </p>
-      <h3>
-        <span>{icone}</span>
-        {titulo}
-      </h3>
+      <h3>{titulo}</h3>
       <p>{descricao}</p>
-      <p>
-        <b>Lançamento:</b> <time>{data}</time>
-      </p>
-      {children}
+      <p>{precoFormatado}</p>
     </StyledArtigo>
   );
 }
