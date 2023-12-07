@@ -1,4 +1,4 @@
-import { StyledRodape } from "../styles/styles.js";
+import { StyledRodape } from "../styles/styles";
 
 function Rodape() {
   return (

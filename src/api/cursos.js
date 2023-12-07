@@ -1,5 +1,3 @@
-// modulos/cursos.js
-
 const cursos = [
   {
     id: 1,
@@ -42,6 +40,12 @@ const cursos = [
     titulo: "Figma",
     categoria: "Design",
     preco: 100,
+  },
+  {
+    id: 8,
+    titulo: "Produção caseira de Paçocas",
+    categoria: "Gastronomia",
+    preco: 1000,
   },
 ];
 

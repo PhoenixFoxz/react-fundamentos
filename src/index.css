@@ -1,51 +1,24 @@
-/* Folha de Estilo GLOBAL
-Será usada por elementos em todos os componentes
-da aplicação React */
-
-/* Ajuste do Box Modal com box-sizing */
+/*  CSS Global (src/index.css) */
 *,
 *::after,
 *::before {
   box-sizing: border-box;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* Reset */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+}
+
 body,
 h1,
 h2,
 h3,
-p {
+p,
+hr {
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: 18px;
-}
-
-/* Bloco/Box */
-.sombra {
-  box-shadow: gray 0 0 10px;
-  background-color: white;
-  border-radius: 10px;
-  padding: 0.09%;
-}
-
-.destaque-texto {
-  background-color: yellow;
-  padding: 4px;
-  border-bottom: 4px;
-}
-
-.centralizar {
-  text-align: center;
-}
-
-.corLetraMenu {
-  color: white;
-}
-
-.corMenu {
-  background-color: rgb(82, 81, 81);
 }

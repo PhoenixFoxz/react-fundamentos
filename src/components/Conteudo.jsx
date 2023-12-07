@@ -1,36 +1,79 @@
-import { StyledConteudo } from "../styles/styles.js";
-import cursos from "../../modulos/cursos.js";
+/* Importação dos dados da "api de mentirinha" */
+import cursos from "../api/cursos";
+
 import Artigo from "./Artigo";
+import styled from "styled-components";
+
+const StyledConteudo = styled.main`
+  width: 90vw;
+  margin: 1rem auto;
+  background-color: aliceblue;
+  padding: 1rem;
+  box-shadow: darkblue 0 0 1px inset;
+
+  h2,
+  p {
+    padding: 0.2rem 0;
+  }
+
+  @media screen and (min-width: 650px) {
+    .artigos {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      & article {
+        width: 48%;
+        margin: 1%;
+      }
+    }
+  }
+`;
 
 function Conteudo() {
+  /* Função que será chamada a partir
+  do evento acionado por um componente/elemento. */
+  const exemplo2 = () => {
+    alert("Exemplo 2");
+  };
+
+  const exemplo3 = (valor) => {
+    alert("Exemplo 3: " + valor);
+  };
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
+      <button onClick={exemplo2}>Exemplo 2</button>
+
+      <br />
+
+      <button onClick={() => exemplo3("Estou com o Pai")}>
+        Exemplo 3 (Acionando o evento/função através do Conteudo [pai])
+      </button>
+
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, pariatur
-        explicabo. Rerum excepturi corporis, esse quisquam ullam cum et ad ea
-        facere voluptas optio suscipit voluptatibus nulla praesentium odio ut
-        similique maxime recusandae molestias est labore voluptatem non
-        consequatur. Quam ratione, vero, itaque beatae maxime amet facilis
-        aperiam nostrum officiis dolore cupiditate, veritatis ea dicta libero
-        praesentium laboriosam quas voluptatibus culpa rem? Minima odio cumque
-        quaerat, corporis a eos quam nemo perspiciatis sunt, incidunt
-        consequuntur. Distinctio explicabo illo incidunt. Officia laboriosam
-        accusamus recusandae at iste. Cupiditate incidunt ullam molestias
-        voluptate et numquam excepturi porro sit ipsam quae. Eveniet, officiis
-        facilis?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+        labore? Officia quae quo a quas excepturi distinctio sint voluptas
+        labore iste veniam possimus facere adipisci sit repellat, voluptate,
+        expedita aspernatur.
       </p>
-      <div>
-        {cursos.map((curso) => {
-          return (
-            <Artigo
-              key={curso.id}
-              titulo={curso.titulo}
-              descricao={curso.categoria}
-              preco={curso.preco}
-            />
-          );
-        })}
+
+      <div className="artigos">
+        {cursos.map((curso) => (
+          <Artigo
+            /* É necessário criar uma prop para passar a 
+          chamada/referência da função do componente pai */
+            // handleClick={() => { exemplo3(curso.categoria) }}
+            aoClicar={() => {
+              exemplo3(curso.categoria);
+            }}
+            key={curso.id}
+            categoria={curso.categoria}
+            titulo={curso.titulo}
+            preco={curso.preco}
+          />
+        ))}
       </div>
     </StyledConteudo>
   );
