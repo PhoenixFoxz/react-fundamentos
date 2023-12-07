@@ -17,8 +17,13 @@ function Conteudo() {
 
   // Gerando um novo array de cursos filtrados
   const cursosFiltrados = cursos.filter((curso) => {
+    // Se o state categoria for igual a uma das categorias dos cursos, então será retornada a lista de cursos daquela categoria. Senão, será retornada lista completa devido ao state ser null (ou seja, não há uma categoria para filtrar)
     return curso.categoria === categoria || categoria === null;
   });
+
+  const limparFiltro = () => {
+    return setCategoria(null);
+  };
 
   return (
     <StyledConteudo>
@@ -37,6 +42,10 @@ function Conteudo() {
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
+          <button onClick={aplicarFiltro}>Mobile</button>
+          <button onClick={aplicarFiltro}>Gastronomia</button>
+          <button onClick={aplicarFiltro}>Música</button>
+          {categoria && <button onClick={limparFiltro}>Limpar Filtro</button>}
         </p>
         {/* Renderização Condicional
         O texto/tag/componente somente será renderizado/exibido se o state categoria existir (ou seja, não é null, undefined, false) */}
