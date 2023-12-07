@@ -31,26 +31,9 @@ const StyledConteudo = styled.main`
 `;
 
 function Conteudo() {
-  /* Função que será chamada a partir
-  do evento acionado por um componente/elemento. */
-  const exemplo2 = () => {
-    alert("Exemplo 2");
-  };
-
-  const exemplo3 = (valor) => {
-    alert("Exemplo 3: " + valor);
-  };
-
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
-      <button onClick={exemplo2}>Exemplo 2</button>
-
-      <br />
-
-      <button onClick={() => exemplo3("Estou com o Pai")}>
-        Exemplo 3 (Acionando o evento/função através do Conteudo [pai])
-      </button>
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
@@ -62,12 +45,6 @@ function Conteudo() {
       <div className="artigos">
         {cursos.map((curso) => (
           <Artigo
-            /* É necessário criar uma prop para passar a 
-          chamada/referência da função do componente pai */
-            // handleClick={() => { exemplo3(curso.categoria) }}
-            aoClicar={() => {
-              exemplo3(curso.categoria);
-            }}
             key={curso.id}
             categoria={curso.categoria}
             titulo={curso.titulo}
