@@ -14,6 +14,12 @@ function Conteudo() {
     // E em seguida passamos este texto para o state de categoria
     setCategoria(categoriaEscolhida);
   };
+
+  // Gerando um novo array de cursos filtrados
+  const cursosFiltrados = cursos.filter((curso) => {
+    return curso.categoria === categoria || categoria === null;
+  });
+
   return (
     <StyledConteudo>
       <h2>Conteúdo da aplicação</h2>
@@ -27,7 +33,7 @@ function Conteudo() {
 
       <div className="filtros">
         <p>
-          <b>Filtrar por: </b>
+          <b>Filtrar por:</b>
           <button onClick={aplicarFiltro}>Front-End</button>
           <button onClick={aplicarFiltro}>Back-End</button>
           <button onClick={aplicarFiltro}>Design</button>
@@ -42,7 +48,7 @@ function Conteudo() {
       </div>
 
       <div className="artigos">
-        {cursos.map((curso) => (
+        {cursosFiltrados.map((curso) => (
           <Artigo
             key={curso.id}
             categoria={curso.categoria}
