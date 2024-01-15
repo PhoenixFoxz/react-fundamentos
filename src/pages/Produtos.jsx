@@ -4,7 +4,11 @@ import { useState } from "react";
 function Produtos() {
   // O state "produtos" é iniciado como uma array vazio. Posteriormente (após o carregamento dos dados da API),ele será preenchido com os objetos/produtos.
 
-  const [produtos, setProdutos] = useState();
+  const [produtos, setProdutos] = useState([]);
+
+  /* State de loading (por padrão, incia ativado/true) */
+
+  const [loading, setLoading] = useState([true]);
 
   /* Gerenciando o efeito colateral
   do componente para o carregamento dos dados da API.
@@ -23,8 +27,9 @@ function Produtos() {
     try {
       const resposta = await fetch(`https://fakestoreapi.com/products`);
       const dados = await resposta.json();
-      setProdutos(dados);
       console.log(dados);
+      setProdutos(dados); // adicionamos ao state
+      setLoading(false); // desativamos o loading
     } catch (error) {
       console.error("Houve um erro: "+error)
     }
@@ -34,11 +39,28 @@ function Produtos() {
 
   }, []);
 
- 
-  
-  
+  return (
+    <article>
+      <h2>Produtos</h2>
 
-  return <h2>Produtos</h2>;
+      { loading ? (<div>
+        <img src="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif" alt="" /> 
+        <p>Carregando...</p>
+        </div>) : (
+        produtos.map( (produto) => {
+          return <>
+          <section key={produto.id}>
+            <h3>{produto.title}</h3>
+            <p>Preço: {produto.price}</p>
+            <p>{produto.description}</p>
+          </section>
+          <hr />
+          </>
+        })
+      )}
+
+    </article>
+  ) 
 }
 
 export default Produtos;
