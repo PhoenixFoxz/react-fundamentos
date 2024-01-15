@@ -1,13 +1,15 @@
 import { useState } from "react";
 
 function Produtos() {
+  // O state "produtos" é iniciado como uma array vazio. Posteriormente (após o carregamento dos dados da API),ele será preenchido com os objetos/produtos.
 
-  useState();
+  const [produtos, setProdutos] = useState();
 
   const carregarDados = async () => {
     try {
       const resposta = await fetch(`https://fakestoreapi.com/products`);
       const dados = await resposta.json();
+      setProdutos(dados);
       console.log(dados);
     } catch (error) {
       console.error("Houve um erro: "+error)
