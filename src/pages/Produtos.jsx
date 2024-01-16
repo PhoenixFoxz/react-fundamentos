@@ -41,14 +41,14 @@ function Produtos() {
 
   }, []);
 
-  return (
+  return ( 
     <article>
+      <h2 style={{textAlign: "center"}}>Produtos</h2>
       { loading ? (<div style={{textAlign: "center"}}>
         <img src={imagemLoading} alt="Carregando..." /> 
         </div>) : (
         produtos.map( (produto) => {
           return <>
-          <h2>Produtos</h2>
           <section key={produto.id}>
             <h3>{produto.title}</h3>
             <p>Preço: {produto.price}</p>
