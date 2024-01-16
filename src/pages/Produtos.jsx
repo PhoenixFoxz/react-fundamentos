@@ -44,8 +44,7 @@ function Produtos() {
       <h2>Produtos</h2>
 
       { loading ? (<div>
-        <img src="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif" alt="" /> 
-        <p>Carregando...</p>
+        <img rc="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif" alt="" /> 
         </div>) : (
         produtos.map( (produto) => {
           return <>
