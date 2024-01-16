@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import imagemLoading from "../assets/loading-gif-transparent-10.gif"
 
 function Produtos() {
@@ -47,11 +48,12 @@ function Produtos() {
         </div>) : (
         produtos.map( (produto) => {
           return <>
-            <h2>Produtos</h2>
+          <h2>Produtos</h2>
           <section key={produto.id}>
             <h3>{produto.title}</h3>
             <p>Preço: {produto.price}</p>
             <p>{produto.description}</p>
+            <p><Link to={`/produtos/${produto.id}`}>Ver detalhes</Link></p>
           </section>
           <hr />
           </>
