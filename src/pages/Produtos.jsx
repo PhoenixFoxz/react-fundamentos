@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import imagemLoading from "../assets/loading-gif-transparent-10.gif"
 
 function Produtos() {
   // O state "produtos" é iniciado como uma array vazio. Posteriormente (após o carregamento dos dados da API),ele será preenchido com os objetos/produtos.
@@ -41,13 +42,12 @@ function Produtos() {
 
   return (
     <article>
-      <h2>Produtos</h2>
-
-      { loading ? (<div>
-        <img rc="https://olaargentina.com/wp-content/uploads/2019/11/loading-gif-transparent-10.gif" alt="" /> 
+      { loading ? (<div style={{textAlign: "center"}}>
+        <img src={imagemLoading} alt="Carregando..." /> 
         </div>) : (
         produtos.map( (produto) => {
           return <>
+            <h2>Produtos</h2>
           <section key={produto.id}>
             <h3>{produto.title}</h3>
             <p>Preço: {produto.price}</p>
